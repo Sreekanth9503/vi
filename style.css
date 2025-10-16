@@ -81,3 +81,9 @@ footer{
 .carousel-control-next-icon {
   display: none !important;
 }
+.carousel-control-prev,
+.carousel-control-next,
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none !important;
+}
