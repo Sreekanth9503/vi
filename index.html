@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container-fluid  sticky-top p-0">
+        <nav class="navbar navbar-expand-xxl">
+            <div class="container px-5">
+                <a href="#" class="  mb-0">
+                    <img src="assets/Vi-logo.svg" class=" m-auto p-0" alt="">
+                </a>
+                <button class="navbar-toggler ms-auto text-bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-2" style="font-size: 18px;">
+                    <li class="nav-item ps-3">
+                        <a href="#recharge" class="nav-link">Prepaid</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a href="#recharge" class="nav-link">Postpaid</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a href="#connection" class="nav-link">New Connection</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a href="#shows" class="nav-link">shows</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a href="#5g" class="nav-link">5G</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a href="#explore" class="nav-link">Explore</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a href="#download" class="nav-link">Download</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a href="#recharges" class="nav-link">Recharge</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <a href="signup.html"><button class="ms-3 mb-2 p-2 px-2 text-bg-danger" style="border-radius: 15px;">Sign Up</button></a>
+                <a href="login.html"><button class="ms-3 mb-2 p-2 px-2 text-bg-danger" style="border-radius: 15px;">Login</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="mainslide container" >
+        <div class="row">
+            <div class="col-lg-12 m-auto mt-5 ">
+                <div class="carousel slide" data-bs-ride="carousel" id="banner" style="border-radius: 35px; overflow: hidden;">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#banner" data-bs-slide-to="0" class="active" ></button>
+                        <button type="button" data-bs-target="#banner" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#banner" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#banner" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#banner" data-bs-slide-to="4"></button>
+                        <button type="button" data-bs-target="#banner" data-bs-slide-to="5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <img src="assets/banner1.webp" alt="" class="w-100">
+                        </div>
+                        <div class="carousel-item"  data-bs-interval="2000">
+                            <img src="assets/banner2.webp" alt="" class="w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="assets/banner3.webp" alt="" class="w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="assets/banner4.webp" alt="" class="w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="assets/banner5.webp" alt="" class="w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="assets/banner6.webp" alt="" class="w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container my-3">
+        <div class="row">
+            <div class="recharge col-lg-6 ps-4 mt-3" id="recharge">
+                <h3 class="fw-bold pt-3">recharge/pay bill</h3>
+                <div class="recharge-opt">
+                    <div class="recharge-btn mt-3">
+                        <input type="radio" class="btn-check " name="connection" id="prepaid" autocomplete="off" checked>
+                        <label class="btn btn-outline-secondary rounded-5" for="prepaid">Prepaid</label>
+                        <input type="radio" class="btn-check" name="connection" id="postpaid" autocomplete="off">
+                        <label class="btn btn-outline-secondary rounded-5" for="postpaid">Postpaid</label>
+                    </div>
+                    <div class="number my-3 me-5 fw-medium">
+                        <form action="index.html" id="recharge" onsubmit="return ValidateNumber()">
+                            <div class="form-floating">
+                                <input type="text" id="number" placeholder="number" class="form-control">
+                                <p id="numberError" class="text-start text-danger"></p>
+                                <label for="number">Enter Mobile Number</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary fw-bold mb-3">Submit</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="sim  col-lg-6 mt-3" id="connection">
+                <h2 class="fw-bold pb-1 p-3">new to Vi?</h2>
+                <p class="fs-5 ps-3">Get Vi SIM Delivered free</p>
+                <div class="row text-center g-3">
+                    <div class="col-md-3 w-auto m-auto mb-3 mt-3">
+                        <div class="sim-box p-3 b h-100">
+                            <img src="assets/img4.svg" alt="" class="img-fluid mb-2" style="width:40px;">
+                            <h6 class="mb-0">Port to Vi</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w-auto m-auto mt-3">
+                        <div class="sim-box p-3 b h-100">
+                            <img src="assets/img3.svg" alt="" class="img-fluid mb-2" style="width:40px;">
+                            <h6 class="mb-0">Port to Vi</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w-auto m-auto mt-3">
+                        <div class="sim-box p-3 b h-100">
+                            <img src="assets/img2.svg" alt="" class="img-fluid mb-2" style="width:40px;">
+                            <h6 class="mb-0">Port to Vi</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w-auto m-auto mt-3">
+                        <div class="sim-box p-3 b h-100">
+                            <img src="assets/img1.svg" alt="" class="img-fluid mb-2" style="width:40px;">
+                            <h6 class="mb-0">Port to Vi</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="secondslide container mb-5" id="shows">
+        <h2 class="mt-5 text-center">there’s always more with Vi</h2>
+        <div class="row">
+            <div class="col-lg-12 m-auto mt-3 ">
+                <div class="carousel slide" data-bs-ride="carousel" id="banner" style="border-radius: 35px; overflow: hidden;">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#banner" data-bs-slide-to="0" class="active" ></button>
+                        <button type="button" data-bs-target="#banner" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#banner" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#banner" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#banner" data-bs-slide-to="4"></button>
+                        <button type="button" data-bs-target="#banner" data-bs-slide-to="5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <img src="assets/img1.webp" alt="" class="w-75">
+                        </div>
+                        <div class="carousel-item"  data-bs-interval="2000">
+                            <img src="assets/img2.webp" alt="" class="w-75">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="assets/img3.webp" alt="" class="w-75">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="assets/img4.webp" alt="" class="w-75">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="assets/img1.png" alt="" class="w-75">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="assets/img5.webp" alt="" class="w-75">
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev " data-bs-target="#banner" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" data-bs-target="#banner" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="container" id="5g">
+        <div class="row m-auto">
+            <div class="col-md-3 w-auto m-auto mt-3">
+                <div class="sim-box p-3 b h-100">
+                    <img src="assets/img2.svg" alt="" class="img-fluid mb-2" style="width:40px;">
+                    <h6 class="mb-0 pb-3">Plan <br>Upgrade</h6>
+                </div>
+            </div>
+            <div class="col-md-3 w-auto m-auto mt-3 ">
+                <div class="sim-box p-3 b h-100 ">
+                    <img src="assets/img13.svg" alt="" class="img-fluid mb-2 " style="width:40px;">
+                    <h6 class="mb-0">Explore <br>Hero <br> Unlimited</h6>
+                </div>
+            </div>
+            <div class="col-md-3 w-auto m-auto mt-3">
+                <div class="sim-box p-3 b h-100">
+                    <img src="assets/img14.svg" alt="" class="img-fluid mb-2" style="width:40px;">
+                    <h6 class="mb-0 pb-3 px-2">Utilities<br>Bills</h6>
+                </div>
+            </div>
+            <div class="col-md-3 w-auto h-50 m-auto mt-3">
+                <div class="sim-box p-3 b h-100">
+                    <img src="assets/img16.svg" alt="" class="img-fluid m-0 text-center mb-2" style="width:40px;">
+                    <h6 class="mb-0">Prepaid <br>to <br>postpaid</h6>
+                </div>
+            </div>
+            <div class="col-md-3 w-auto h-50 m-auto mt-3">
+                <div class="sim-box p-3 b h-100">
+                    <img src="assets/img15.svg" alt="" class="img-fluid mb-2" style="width:40px;">
+                    <h6 class="mb-0 pb-3">Help & <br>Support</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container" id="download">
+        <div class="row h-auto">
+            <div class="content col-lg-6 mb-5">
+                <h2>Experience all new Vi App</h2>
+                <p class="fw-bold">Download the App for exclusive offers,<br> brmanage your account and much more, on-the-go.</p>
+                <div>
+                <img src="assets/img7.svg" alt="">
+                <h4 class="mt-3">Scan QR code to download the Vi app</h4>
+                <a href="https://play.google.com/store/apps/details?id=com.mventus.selfcare.activity&hl=en_IN"><img src="assets/img11.svg" class="mt-3" alt=""></a>
+                <a href="https://apps.apple.com/us/app/vi-recharge-payments-games/id623834540"><img src="assets/img12.svg" class="mt-3" alt=""></a>
+            </div>
+            </div>
+            <div class="col-lg-6 px-0">
+                <img src="assets/img6.svg" style="overflow: hidden; width:100%" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="package container mt-5 mb-5" id="recharges">
+        <div class="row">
+            <div class="mt-3"> <h5 class="m-0 ps-3 text-danger fw-bolder ">Most Popular</h5></div>
+            <div class="col-md-6  pt-3">
+                <div class="package-box mt-0 m-3">
+                    <h6 class="text-danger ps-3 fw-bold">Unlimited 5G</h6>
+                    <div class="row">
+                        <div class="col-6 col-lg-6 col-xl-3 ps-4">
+                            <h2>₹365</h2>
+                        </div>
+                        <div class="col-6 col-lg-6 col-xl-3">
+                            <h3 class="mb-0 ps-3">2GB/day</h3>
+                            <p class="fs-5 fw-5 p-0 ps-3 text-secondary">data</p>
+                        </div>
+                        <div class="col-6 col-lg-6 col-xl-3">
+                            <h3 class="mb-0 ps-3">28 days</h3>
+                            <p class="fs-5 ps-3 fw-5 p-0 text-secondary">Validity</p>
+                        </div>
+                        <div class="col-6 col-lg-6 col-xl-3">
+                            <button class="btn text-bg-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#recharge1">Buy</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="ps-3 pt-3 pb-3">
+                                <img src="assets/5G.svg" alt="">
+                                <img src="assets/half-day.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <ul>
+                                <li><strong>Unlimited 5G Data</strong></li>
+                                <li class="text-secondary">12am-12pm Unlimited Data</li>
+                                <li class="text-secondary">weekend Data Rollover </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  pt-3">
+                <div class="package-box mt-0 m-3">
+                    <h6 class="text-danger pt-3 ps-3 fw-bold">Unlimited 5G</h6>
+                    <div class="row">
+                        <div class="col-6 col-lg-6 col-xl-3 ps-4">
+                            <h2>₹994</h2>
+                        </div>
+                        <div class="col-6 col-lg-6 col-xl-3">
+                            <h3 class="mb-0 ps-3">2GB/day</h3>
+                            <p class="fs-5 ps-3 fw-5 p-0 text-secondary">data</p>
+                        </div>
+                        <div class="col-6 col-lg-6 col-xl-3">
+                            <h3 class="mb-0 ps-3">84 days</h3>
+                            <p class="fs-5 fw-5  p-0 ps-3 text-secondary">Validity</p>
+                        </div>
+                        <div class="col-6 col-lg-6 col-xl-3">
+                            <button class="btn text-bg-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#recharge2">Buy</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="ps-3 pt-3 pb-3">
+                                <img src="assets/5G.svg" alt="">
+                                <img src="assets/half-day.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <ul>
+                                <li><strong>Unlimited 5G Data</strong></li>
+                                <li class="text-secondary">12am-12pm Unlimited Data</li>
+                                <li class="text-secondary">JioHotstar Mobile App</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col-md-6 m-auto pt-3">
+                <div class="package-box mt-0 m-3">
+                    <h6 class="text-danger ps-3 pt-3 fw-bold">Unlimited 5G</h6>
+                    <div class="row">
+                        <div class="col-6 col-lg-6 col-xl-3 ps-4">
+                            <h2>₹3699</h2>
+                        </div>
+                        <div class="col-6 col-lg-6 col-xl-3">
+                            <h3 class="mb-0 ps-3">2GB/day</h3>
+                            <p class="fs-5 fw-5  p-0 ps-3 text-secondary">data</p>
+                        </div>
+                        <div class="col-6 col-lg-6 col-xl-3">
+                            <h3 class="mb-0 ps-3">365 days</h3>
+                            <p class="fs-5 fw-5  p-0 ps-3 text-secondary">Validity</p>
+                        </div>
+                        <div class="col-6 col-lg-6 col-xl-3">
+                            <button class="btn text-bg-danger rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#recharge3">Buy</button>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="ps-3 pt-3 pb-3">
+                                <img src="assets/5G.svg" alt="">
+                                <img src="assets/half-day.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <ul>
+                                <li><strong>Unlimited 5G Data</strong></li>
+                                <li class="text-secondary">12am-12pm Unlimited Data</li>
+                                <li class="text-secondary">JioHotstar Mobile App</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <div class="modal fade" id="recharge1" data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="fw-bold">Recharge Details</h3>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h3>Price : ₹ 365/- </h3>
+                        <h3>Validity: 28 days</h3>
+                        <h3>Data : 2GB/day</h3>
+                        <form action="index.html" id="modal1" onsubmit="return   ModalValidateNumber()">
+                            <div class="row">
+                                <div class="col-12 px-3">
+                                    <div class="form-floating">
+                                        <input type="text" placeholder="Enter number" id="mobile" class="form-control mb-3">
+                                         <label for="mobile">Mobile Number</label>
+                                    </div>
+                                    <p id="mobileError" class="text-danger text-start"></p>
+                                    <button class="p-3 text-bg-success fw-bold" style="border-radius: 10px; border:0px">submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="recharge2" data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="fw-bold">Recharge Details</h3>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h3>Price : ₹ 994/- </h3>
+                        <h3>Validity: 84 days</h3>
+                        <h3>Data : 2GB/day</h3>
+                        <form action="index.html" id="modal2" onsubmit="return   Modal2ValidateNumber()">
+                            <div class="row">
+                                <div class="col-12 px-3">
+                                    <div class="form-floating">
+                                        <input type="text" placeholder="Enter number" id="mobile2" class="form-control mb-3">
+                                         <label for="mobile2">Mobile Number</label>
+                                    </div>
+                                    <p id="mobileError2" class="text-danger text-start"></p>
+                                    <button class="p-3 text-bg-success fw-bold" style="border-radius: 10px; border:0px">submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="recharge3" data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="fw-bold">Recharge Details</h3>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h3>Price : ₹ 3699/- </h3>
+                        <h3>Validity: 365 days</h3>
+                        <h3>Data : 2GB/day</h3>
+                        <form action="index.html" id="modal3" onsubmit="return   Modal3ValidateNumber()">
+                            <div class="row">
+                                <div class="col-12 px-3">
+                                    <div class="form-floating">
+                                        <input type="text" placeholder="Enter number" id="mobile3" class="form-control mb-3">
+                                         <label for="mobile3">Mobile Number</label>
+                                    </div>
+                                    <p id="mobileError3" class="text-danger text-start"></p>
+                                    <button class="p-3 text-bg-success fw-bold" style="border-radius: 10px; border:0px">submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6 p-3 h-auto">
+                <div class="text-bg-success ps-5" style="border-radius: 20px;">
+                    <div class="text-end pe-5"><img src="assets/img8.svg"  alt=""></div>
+                    <h3 class="fs-1">let Vic help you</h3>
+                    <h5 class="pt-1">Vic, your personal Vi assistant<br>is here to help you</h5>
+                    <h5 class="pt-1">Get ready to experience the potential <br> of the Vi 5G network in India. <br>Seamless connectivity with Vi 5G ready SIM.</h5>
+                    <h5 class="pt-1">Download the App for exclusive offers, <br>manage your account and much more, on-the-go.</h5>
+                    <h3 class="pt-3">chat with Vic on</h3>
+                    <div class="d-flex text-center">
+                        <div class="p-3">
+                        <i class="bi bi-whatsapp"></i>
+                        <p class="fw-medium">Whatsapp</p>
+                        </div>
+                        <div class="p-3">
+                            <i class="bi bi-globe"></i>
+                            <p class="fw-medium">Website</p>
+                        </div>
+                        <div class="p-3">
+                            <i class="bi bi-phone"></i>
+                            <p class="fw-medium">Vi App</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 p-3">
+                <div>
+                    <div class="text-bg-success ps-5" style="border-radius: 20px;">
+                    <div class="text-end pe-5 pt-3"><img src="assets/img9.svg" alt=""></div>
+                    <h3 class="fs-1">FAQS</h3>
+                    <h5 class="pt-3">Here are frequently asked questions. <br>Might help you as well.</h5>
+                    <h3 class="pt-3 pb-1">View FAQS</h3>
+                </div>
+                <div class="text-bg-success ps-5" style="border-radius: 20px;">
+                    <div class="text-end pe-5 pt-3"><img src="assets/img9.svg" alt=""></div>
+                    <h3 class="fs-1">join the <br>conversation</h3>
+                    <h5 class="pt-3">Keep in touch with us  on our social channels.</h5>
+                    <div class="content-icon pb-3">
+                        <i class="bi bi-facebook mx-2"></i>
+                        <i class="bi bi-instagram mx-2"></i>
+                        <i class="bi bi-twitter mx-2"></i>
+                        <i class="bi bi-youtube mx-2"></i>
+                        <i class="bi bi-linkedin mx-2"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="details container-fluid mt-3" id="explore">
+        <div class="container">
+            <h3 class="pt-3">Our Other Important Offerings:</h3>
+            <h5 class="mt-5">Recharge Offers:</h5>
+            <p>Vi brings you the best mobile rechargeoffers with unlimited calling and daily data for seamless connectivity. Avail exclusive online recharge offers via the Vi App or website and enjoy a world full of benefits such as Short/Long-Term Validity, Unlimited Night Data, Data Rollover, Data Delight, access to multiple OTTs, and much more with Vi online recharge offers.</p>
+            <ul>
+                <li>
+                    <p class="fs-5">Recharge via the Vi App to avail App exclusive offers</p>
+                </li>
+                <li>
+                    <p class="fs-5">Check the Recharge offers on the Cashback Offerspage</p>
+                </li>
+                <li>
+                    <p class="fs-5">Head to the Prepaid Plans page and click on pack details for offers such as extra data, OTT subscriptions at no extra cost, etc.</p>
+                </li>
+                <li>
+                    <p class="fs-5">Browse through Vi App Homepage to find out about festive recharge offers, and Spin the Wheel</p>
+                </li>
+            </ul>
+            <h5 class="mt-5">Bill Payment Offers</h5>
+            <p class="mt-3">Pay bills online and avail postpaid bill payment offers with Cred Pay, Amazon Pay, Paytm, MobiKwik, LazyPay, etc. Vi postpaid bill offers include assured cashbacks and other discounts on eligible transactions. Cashback would be credited to respective UPI wallets or via scratch cards. Enrol for autopay to automatically pay postpaid bills online.</p>
+            <h5 class="mt-5">Caller Tunes Download</h5>
+            <p class="mt-3">Vi Caller tunes are a unique way to keep callers engaged with entertaining songs/music/movie dialogues or customized tunes. Browse through trending songs or the latest viral hits and set your favorite songs as callertunes.Go to the music store for a vast repository of songs/dialogues across genres and select a caller tune of your preference.</p>
+            <h5 class="mt-5">Games</h5>
+            <p class="mt-3">Play games onlineacross categories such as action games, board games, fantasy, matches, tournaments, trending free games, etc. on the Vi App. Participate in online games and win exciting rewards or vouchers. Check out Game of the Day on the Vi App and play free online games for fun. Play VIP tournaments with a daily pass and win big!</p>
+            <h5 class="mt-5">5G</h5>
+            <p class="mt-3">Get ready to experience the potential of the Vi 5G network in India. Seamless connectivity with Vi 5G ready SIM. Explore more on <br> https://www.myvi.in/5g-network</p>
+            <h5 class="mt-5">Vi Movies and TV</h5>
+            <p class="mt-3 pb-3 m-0">Get a Vi Movies & TV Pro pack to enjoy 13+ OTTs via a single App. Binge-watch the latest Hollywood or Bollywood movies, TV shows and originals, Live News, Live Sports, Short films, Kids Shows, and more. Enjoy curated content in over 13 different languages from partner OTT platforms such as JioHotstar, Sony LIV, Fancode, PlayFlix, Discovery, Chaupal, & more! And that's not all, we have added Korean to the catalog too - now fulfill your K-drama cravings all within the Vi Movies & TV app. What are you waiting for?</p>
+        </div>
+    </section>
+    <footer class="container-fluid text-bg-dark p-3 text-center font-arial " id="contact">
+        <h4 class="h-50" style="font-size: 18px;">&trade;  Vi</h4>
+        <div class="social-icons fs-5">
+            <i class="bi bi-instagram mx-2"></i>
+            <i class="bi bi-facebook mx-2"></i>
+            <i class="bi bi-whatsapp mx-2"></i>
+        </div>
+    </footer>
+    <script src="form.js"></script>
+</body>
+</html>
+
+

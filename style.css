@@ -1,0 +1,83 @@
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;          
+    height: 12px;
+    border-radius: 50%; 
+    background-color: black;
+}
+.carousel-item {
+  transition: transform 1s ease-in-out; 
+}
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #ced4da !important; 
+}
+
+.recharge,
+.sim{
+border: 1px  lightgrey; 
+border-radius:16px;
+box-shadow: 0px 4px 4px 2px rgba(96, 97, 112, 0.16), 0 0 4px 0 rgba(40, 41, 61, 0.04);
+}
+.carousel-bg {
+  height: 60vh;
+ 
+  background-size: cover;
+  background-position: center;
+  
+}
+.carousel-indicators,
+.carousel-inner{
+  text-align: center;
+}
+.content{
+  padding-top: 100px;
+  padding-left: 50px;
+}
+.bi{
+  font-size: 20px;
+}
+footer{
+  background-color: black;
+  color: white;
+  height: 10vh;
+}
+.details{
+  background-color: antiquewhite;
+  margin: 0%;
+}
+.nav-item a{
+  color: white;
+}
+.nav-item a:hover{
+  color: orangered;
+}
+.navbar{
+  background-color: black;
+  height: 100%;
+}
+.sim-box,
+.detail
+{
+  background-color: lightgoldenrodyellow;
+  border-radius: 15px;
+}
+.faqs,
+.links{
+  background-color: lightpink;
+  border-radius: 20px;
+}
+.package-box{
+  border-radius: 20px;
+  background-color:whitesmoke;
+}
+.package{
+  background-color: lightgoldenrodyellow;
+}
+.carousel-control-prev,
+.carousel-control-next,
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none !important;
+}

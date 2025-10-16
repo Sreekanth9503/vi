@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Login Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <section class="container" style="height: 100vh;">
+        <div class="row">
+            <div class="col-md-12 col-lg-6 m-auto pt-5">
+                <h1 class=" text-center fw-bold pb-3" style="font-size: 50px; color:orangered">Login Form</h1>
+                <div class="p-5 bg-white shadow rounded">
+                    <form action="index.html" id="Login" onsubmit="return validateLogin()">
+                        <label for="name" class="py-2 fw-medium fs-5">Username *</label>
+                    <input type="text" id="name" placeholder="Enter Name" class="form-control mb-2">
+                    <p id="nameError" class="text-danger text-start"></p>
+                    <label for="password" class="py-2 fw-medium fs-5">Password *</label>
+                    <input type="text" id="password" placeholder="Enter Password" class="form-control mb-2">
+                    <p id="passwordError" class="text-danger text-start"></p>
+                    <button type="submit" class="btn btn-primary mt-2 w-100">Submit</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script>
+        function validateLogin(){
+            const name = document.getElementById("name").value.trim();
+            const nameError = document.getElementById("nameError");
+            const password = document.getElementById("password").value.trim();
+            const passwordError = document.getElementById("passwordError");
+            const nameExp = /^[a-zA-Z\s]+$/;
+            const passwordExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            let nameStatus = false;
+            let passwordStatus = false;
+
+            if(name === ""){
+                nameError.textContent = "Name is mandatory";
+            } 
+            else {
+                if(name.match(nameExp)){
+                    nameStatus = true;
+                    nameError.textContent ="";
+                }
+                else{
+                    nameError.textContent = "Invalid Name";
+                }
+            }
+
+            if(password === ""){
+                passwordError.textContent = "Password is mandatory";
+            } 
+            else {
+                if(password.match(passwordExp)){
+                    passwordStatus = true;
+                    passwordError.textContent = "";
+                }
+                else{
+                    passwordError.textContent = "Invalid Password";
+                }
+            }
+
+            if(nameStatus && passwordStatus){
+                alert("Login Successful");
+                return true;
+            } 
+            else{
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
